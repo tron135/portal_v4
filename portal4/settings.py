@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'candidates',
     'main',
+    'telecallers'
 ]
 
 MIDDLEWARE = [
