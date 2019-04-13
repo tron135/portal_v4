@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'candidates',
     'main',
-    'telecallers'
+    'telecallers',
+    'counselor',
+    'leads',
 ]
 
 MIDDLEWARE = [

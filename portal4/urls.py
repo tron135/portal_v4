@@ -20,5 +20,7 @@ urlpatterns = [
     path('',include('main.urls')),
     path('candidates/',include('candidates.urls')),
     path('telecallers/',include('telecallers.urls')),
+    path('counselor/',include('counselor.urls')),
+    path('leads/',include('leads.urls')),
     path('admin/', admin.site.urls),
 ]

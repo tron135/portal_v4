@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Section: Tele-Dashboard -->
+    <section class="section section-working">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="card-panel blue ligten-4 white-text center">
+                        <div class="input-field add">
+                            <a href="telecaller.html"> 
+                                <button class="btn waves-effect btn-large blue darken-3">
+                                    ADD LEADS
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card-panel blue ligten-4 blue-text center">
+                        <div class="input-field">
+                            <ul class="collapsible">
+                                <li>
+                                <div class="collapsible-header" id="ch">
+                                    <button class="btn waves-effect btn-large blue darken-3">
+                                        LEADS
+                                    </button>
+                                </div>
+                                <div class="collapsible-body">
+                                    <a href="leads.html" class="blue white-text">
+                                        <h5 class="white-text">Leads</h5>
+                                    </a>
+                                    <hr>
+                                    <a href="noncontact.html" class="blue white-text">
+                                        <h5 class="white-text">Non-Contact</h5>
+                                    </a>
+                                    <hr>
+                                    <a href="followup.html" class="blue white-text">
+                                        <h5 class="white-text">Follow-Up</h5>
+                                    </a>
+                                    <hr>
+                                    <a href="pending.html" class="blue white-text">
+                                        <h5 class="white-text">Pending Follow-Up</h5>
+                                    </a>
+                                    <hr>
+                                    <a href="walkin.html" class="blue white-text">
+                                        <h5 class="white-text">Walkin</h5>
+                                    </a>
+                                    <hr>
+                                </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <div class="card-panel blue ligten-4 white-text center">
+                        <div class="input-field add">
+                            <a href="telecaller.html"> 
+                                <button class="btn waves-effect btn-large blue darken-3">
+                                    ADD ENQUIRY
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card-panel blue ligten-4 white-text center">
+                        <div class="input-field add">
+                            <a href="telecaller.html"> 
+                                <button class="btn waves-effect btn-large blue darken-3">
+                                    ADD ADMISSION
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l6 offset-l3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Quick ToDos</span>
+                            <form id="todo-form">
+                            <div class="input-field">
+                                <input type="text" id="todo" placeholder="Add ToDo...">
+                            </div>
+                            </form>
+                            <ul class="collection todos">
+                            <li class="collection-item">
+                                <div>
+                                ToDo One <a href="#" class="secondary-content delete">
+                                    <i class="material-icons">close</i>
+                                </a>
+                                </div>
+                            </li>
+                            <li class="collection-item">
+                                <div>
+                                ToDo Two <a href="#" class="secondary-content delete">
+                                    <i class="material-icons">close</i>
+                                    </a>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

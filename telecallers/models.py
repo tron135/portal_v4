@@ -23,3 +23,5 @@ class Telecallers(models.Model):
   expyr = models.IntegerField()
   expmon = models.IntegerField()
   date = models.DateTimeField(default=datetime.now)
+  def __str__(self):
+    return self.name

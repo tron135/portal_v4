@@ -1,8 +1,11 @@
 from django.db import models
 from datetime import datetime
+from telecallers.models import Telecallers
+from counselor.models import Counselor
 
 # Create your models here.
 class Telecaller(models.Model):
+    telecaller = models.ForeignKey(Telecallers, on_delete=models.DO_NOTHING, default="")
     name = models.CharField(max_length=128)
     qualification = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
@@ -18,7 +21,9 @@ class Telecaller(models.Model):
         return self.name
 
 class Enquiry(models.Model):
-    telecaller_data = models.ForeignKey(Telecaller, on_delete=models.CASCADE)
+    telecaller = models.ForeignKey(Telecallers, on_delete=models.DO_NOTHING, default="")
+    counselor = models.ForeignKey(Counselor, on_delete=models.DO_NOTHING, default="")
+    telecaller_data = models.ForeignKey(Telecaller, on_delete=models.DO_NOTHING)
     name = models.CharField(max_length=128, default="")
     email = models.CharField(max_length=50, default="")
     phone = models.CharField(max_length=15, default="")
@@ -42,7 +47,9 @@ class Enquiry(models.Model):
         return self.telecaller_data
 
 class Admission(models.Model):
-    enquiry_data = models.ForeignKey(Enquiry, on_delete=models.CASCADE)
+    telecaller = models.ForeignKey(Telecallers, on_delete=models.DO_NOTHING, default="")
+    counselor = models.ForeignKey(Counselor, on_delete=models.DO_NOTHING, default="")
+    enquiry_data = models.ForeignKey(Enquiry, on_delete=models.DO_NOTHING)
     roll_no = models.IntegerField()
     batch_code = models.CharField(max_length=128)
     batch_st_date = models.DateTimeField()
