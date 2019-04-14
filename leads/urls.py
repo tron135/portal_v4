@@ -6,4 +6,5 @@ urlpatterns = [
     path('noncontact',views.noncontact,name='noncontact'),
     path('followup',views.followup,name='followup'),
     path('walkin',views.walkin,name='walkin'),
+    path('pending',views.pending,name='pending'),
 ]

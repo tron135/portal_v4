@@ -12,3 +12,6 @@ def followup(request):
 
 def walkin(request):
     return render(request, 'leads/walkin.html')
+
+def pending(request):
+    return render(request, 'leads/pending.html')
