@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="section section-login">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+          <div class="card-panel login blue darken-2 white-text center">
+            <h2>Login</h2>
+            <form action="index.html">
+              <div class="input-field">
+                <i class="material-icons prefix">email</i>
+                <input type="email" id="email">
+                <label class="white-text" for="email">Email</label>
+              </div>
+              <div class="input-field">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" id="password">
+                <label class="white-text" for="password">Password</label>
+              </div>
+              
+              <div class="input-field col s12">
+                <select>
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Telecaller</option>
+                    <option value="2">TeleCounselor</option>
+                    <option value="3">Jr. Counselor</option>
+                    <option value="3">Sr. Counselor</option>
+                    <option value="3">Trainer</option>
+                    <option value="3">Business Development Executive</option>
+                    <option value="3">HR</option>
+                    <option value="3">Admin</option>
+                </select>
+                <label class="white-text">Stream</label>
+              </div>
+              <input type="submit" value="Login" class="btn btn-large btn-extended grey lighten-4 black-text">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

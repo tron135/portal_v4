@@ -6,3 +6,6 @@ def index(request):
 
 def users(request):
     return render(request, 'main/users.html')
+
+def revenue(request):
+    return render(request, 'main/revenue.html')

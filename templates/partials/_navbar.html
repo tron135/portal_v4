@@ -35,11 +35,11 @@
     
             <!-- Dropdown Structure -->
             <ul id='dropdown' class='dropdown-content'>
-            <li><a href="leads.html" class="blue-text">Leads</a></li>
-            <li><a href="noncontact.html" class="blue-text">Non-Contact</a></li>
-            <li><a href="followup.html" class="blue-text">Follow-Up</a></li>
-            <li><a href="pending.html" class="blue-text">Pending Follow-Up</a></li>
-            <li><a href="walkin.html" class="blue-text">Walk-In</a></li>
+            <li><a href="{% url 'leads' %}" class="blue-text">Leads</a></li>
+            <li><a href="{% url 'noncontact' %}" class="blue-text">Non-Contact</a></li>
+            <li><a href="{% url 'followup' %}" class="blue-text">Follow-Up</a></li>
+            <li><a href="{% url 'pending' %}" class="blue-text">Pending Follow-Up</a></li>
+            <li><a href="{% url 'walkin' %}" class="blue-text">Walk-In</a></li>
             </ul>
 
             <!-- Side nav -->
@@ -65,23 +65,23 @@
                 </div>
             </li>
             <li><a href="index.html"> <i class="material-icons">dashboard</i> Dashboard</a></li>
-            <li><a href="categories.html"> <i class="material-icons">grid_on</i> Leads</a></li>
-            <li><a href="categories.html"> <i class="material-icons">monetization_on</i> Revenue</a></li>
-            <li><a href="users.html"> <i class="material-icons">person</i> Users</a></li>
+            <li><a href="{% url 'leads' %}"> <i class="material-icons">grid_on</i> Leads</a></li>
+            <li><a href="{% url 'revenue' %}"> <i class="material-icons">monetization_on</i> Revenue</a></li>
+            <li><a href="{% url 'users' %}"> <i class="material-icons">person</i> Users</a></li>
             <li>
                 <div class="divider"></div>
             </li>
             <li>
-                <a href="telecaller.html"> <i class="material-icons">local_phone</i>Telecaller Form</a>
+                <a href="{% url 'teleform' %}"> <i class="material-icons">local_phone</i>Telecaller Form</a>
             </li>
             <li>
-                <a> <i class="material-icons">contact_phone</i> Enquiry Form</a>
+                <a href="{% url 'enquiry' %}"> <i class="material-icons">contact_phone</i> Enquiry Form</a>
             </li>
             <li>
-                <a> <i class="material-icons">check_box</i> Admission Form</a>
+                <a href="{% url 'admission' %}"> <i class="material-icons">check_box</i> Admission Form</a>
             </li>
             <li>
-                <a href="login.html" class="waves-effect"> <i class="material-icons">arrow_back</i> Logout</a>
+                <a href="{% url 'login' %}" class="waves-effect"> <i class="material-icons">arrow_back</i> Logout</a>
             </li>
             </ul>
         </div>

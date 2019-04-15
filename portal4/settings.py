@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'telecallers',
     'counselor',
     'leads',
+    'login',
+    'bde',
 ]
 
 MIDDLEWARE = [
