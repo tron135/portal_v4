@@ -8,72 +8,72 @@
         <div class="col s12 m8 offset-m2 l9 offset-l2">
         <div class="card-panel tele blue darken-3 white-text center">
             <h2>Telecaller Form</h2>
-            <form action="">
+            <form action="{% url 'teleform' %}" method='POST'>
+                {% csrf_token %}
                 <div class="input-field">
                 <i class="material-icons prefix">person</i>
-                <input id="first_name2" type="text" class="validate">
+                <input id="first_name2" type="text" name="name" class="validate">
                 <label class="active white-text" for="first_name2">Name</label>
                 </div>
                 <div class="input-field">
                 <i class="material-icons prefix">contacts</i>
-                <input id="contact" type="text" class="validate">
-                <label class="active white-text" for="contact">Contact Number</label>
+                <input id="contact" type="text" name="phone" class="validate">
+                <label class="active white-text" for="phone">Contact Number</label>
                 </div>
                 <div class="input-field">
                 <i class="material-icons prefix">email</i>
-                <input id="contact" type="text" class="validate">
-                <label class="active white-text" for="contact">Email</label>
+                <input id="contact" type="text" name="email" class="validate">
+                <label class="active white-text" for="email">Email</label>
                 </div>
                 <div class="input-field">
                 <i class="material-icons prefix">work</i>
-                <input id="qual" type="text" class="validate">
+                <input id="qual" type="text" name="qualification" class="validate">
                 <label class="active white-text" for="qualification">Qualification</label>
                 </div>
                 <div class="input-field">
                 <i class="material-icons prefix">shop_two</i>
-                <input id="college" type="text" class="validate">
-                <label class="active white-text" for="college">College</label>
+                <input id="college" type="text" name="colname" class="validate">
+                <label class="active white-text" for="colname">College</label>
                 </div>
                 <div class="input-field">
                 <i class="material-icons prefix">home</i>
-                <input id="address" type="text" class="validate">
+                <input id="address" type="text" name="address" class="validate">
                 <label class="active white-text" for="address">Address</label>
                 </div>
                 <div class="input-field">
                 <i class="material-icons prefix">dvr</i>
-                <input id="course" type="text" class="validate">
+                <input id="course" type="text"  name="course" class="validate">
                 <label class="active white-text" for="course">Course</label>
                 </div>
                 <div class="input-field selection">
                 <select>
                     <option value="" disabled selected>Choose your option</option>
-                    <option>Banner</option>
-                    <option>Job Fair</option>
-                    <option>Friends</option>
-                    <option>Hoardings</option>
-                    <option>Seminar</option>
-                    <option>Ex-Student</option>
-                    <option>Mailer</option>
-                    <option>Insert</option>
-                    <option>Waves Website</option>
-                    <option>Email</option>
-                    <option>Just Dial</option>
-                    <option>SMS</option>
-                    <option>What's App</option>
-                    <option>Waves App</option>
-                    <option>Workshop</option>
+                    <option value="Banner">Banner</option>
+                    <option value="Job Fair">Job Fair</option>
+                    <option value="Friends">Friends</option>
+                    <option value="Hoardings">Hoardings</option>
+                    <option value="Seminar">Seminar</option>
+                    <option value="Ex-Student">Ex-Student</option>
+                    <option value="Mailer">Mailer</option>
+                    <option value="Waves Website">Waves Website</option>
+                    <option value="Email">Email</option>
+                    <option value="Just Dial">Just Dial</option>
+                    <option value="SMS">SMS</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Waves App">Waves App</option>
+                    <option value="Workshop">Workshop</option>
                 </select>
                 <label class="white-text selection">Source</label>
                 </div>
                 <div class="input-field">
                 <i class="material-icons prefix">comment</i>
-                <input id="source" type="text" class="validate">
-                <label class="active white-text" for="source">Remark</label>
+                <input id="source" type="text"  name="remark" class="validate">
+                <label class="active white-text" for="remark">Remark</label>
                 </div>
                 <div class="input-field">
                 <i class="material-icons prefix">warning</i>
-                <input id="source" type="text" class="validate">
-                <label class="active white-text" for="source">Reason</label>
+                <input id="source" type="text" name="reason" class="validate">
+                <label class="active white-text" for="reason">Reason</label>
                 </div>
                 <div class="input-field">
                 <input type="submit" value="S u b m i t" class="btn waves-effect btn-large btn-extended blue darken-2">

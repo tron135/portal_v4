@@ -17,7 +17,12 @@
                 >
                     <a href="{% url 'dashboard' %}">Dashboard</a>
                 </li>
-                <li><a href="categories.html">Categories</a></li>
+                <li
+                    {% if 'revenue' in request.path %}
+                    class="active"
+                    {% else %}
+                    {% endif %}
+                ><a href="{% url 'revenue' %}">Revenue</a></li>
                 <li
                     {% if 'users' in request.path %}
                     class="active"

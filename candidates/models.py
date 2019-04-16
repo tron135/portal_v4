@@ -4,18 +4,36 @@ from telecallers.models import Telecallers
 from counselor.models import Counselor
 
 # Create your models here.
+sources = (
+    ('Banner','Banner'),
+    ('Job Fair','Job Fair'),
+    ('Friends','Friends'),
+    ('Hoardings','Hoardings'),
+    ('Seminar','Seminar'),
+    ('Ex-Student','Ex-Student'),
+    ('Mailer','Mailer'),
+    ('Waves Website','Waves Website'),
+    ('Email','Email'),
+    ('Just Dial','Just Dial'),
+    ('SMS','SMS'),
+    ('WhatsApp','WhatsApp'),
+    ('Waves App','Waves App'),
+    ('Workshop','Workshop'),
+)
+
 class Telecaller(models.Model):
-    telecaller = models.ForeignKey(Telecallers, on_delete=models.DO_NOTHING, default="")
+    telecaller = models.ManyToManyField(Telecallers, blank=True)
     name = models.CharField(max_length=128)
-    qualification = models.CharField(max_length=50)
-    email = models.CharField(max_length=50)
     phone = models.CharField(max_length=15)
+    email = models.CharField(max_length=50)
+    qualification = models.CharField(max_length=50)
     colname = models.CharField(max_length=256,blank=True)
     address = models.CharField(max_length=256)
     course = models.CharField(max_length=50)
+    source = models.CharField(max_length=128, default="", blank=True, choices=sources)
     remark = models.CharField(max_length=512)
     reason = models.CharField(max_length=512)
-    generated_by = models.CharField(max_length=64)
+    # generated_by = models.CharField(max_length=64, blank=True)
     date = models.DateTimeField(default=datetime.now, blank=True)
     def __str__(self):
         return self.name

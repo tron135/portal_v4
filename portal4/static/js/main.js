@@ -1,3 +1,5 @@
+document.querySelector('.year').innerHTML = date.getFullYear();
+
 // Hide Sections
 $('.section').hide();
 
